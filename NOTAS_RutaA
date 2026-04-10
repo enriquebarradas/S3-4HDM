@@ -1,0 +1,31 @@
+Ruta A = implementación reducida y consistente con:
+- 3 dobletes activos: Hs, H1, H2
+- 1 doblete inerte: Ha
+- <Ha0> = 0
+- Yukawas SM solamente con Hs
+- Potencial truncado: lam9 = lam15 = 0 por construcción
+
+Cambios principales:
+1. S3_4HDM_routeA.m
+   - se aclaró explícitamente el truncamiento físico de la Ruta A;
+   - se mantuvo el mismo contenido físico, pero con formato más limpio;
+   - se dejaron comentarios para evitar confundirlo con el modelo completo del informe.
+
+2. parameters_routeA.m
+   - se alinearon comentarios y dependencias con el vacío activo;
+   - se eliminó la referencia ambigua a un archivo “corregido” previo;
+   - se dejó documentado que lam9 y lam15 no forman parte de esta ruta.
+
+3. particles_routeA.m
+   - se corrigió el LaTeX defectuoso de Fv1: "\\nu_L";
+   - se aclaró cuáles estados son inertes físicos;
+   - se reordenó levemente el archivo para hacerlo más legible.
+
+4. SPheno_routeA.m
+   - se añadieron DefaultInputValues mínimos para facilitar pruebas;
+   - se conservó OnlyLowEnergySPheno = True;
+   - se mantuvo la resolución de tadpoles en {mu0, mu1}.
+
+Advertencia importante:
+Esta Ruta A no implementa el modelo fenomenológico completo del informe.
+No contiene neutrinos derechos, seesaw tipo I, ni Yukawas S3 completos.
